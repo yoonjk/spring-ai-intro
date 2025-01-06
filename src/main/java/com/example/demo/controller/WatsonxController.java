@@ -17,8 +17,6 @@ import com.example.demo.dto.Question;
 @RestController
 @RequestMapping("/api/v1")
 public class WatsonxController {
-
-
 	private final WatsonxAiEmbeddingModel embeddingModel;
 
 	
