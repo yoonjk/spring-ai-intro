@@ -1,5 +1,12 @@
 package com.example.demo.dto;
 
-public record Question(String question) {
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+@ToString
+@Getter
+@Setter
+public class Question {
+	private String message;
 }

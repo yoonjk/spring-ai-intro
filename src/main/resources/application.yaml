@@ -6,9 +6,18 @@ spring:
   ai:
     watsonx:
       ai:
-        base-url: $(WATSONX_BASE_URL)
-        stream-endpoint: ${WATSONX_STREAM_ENDPOINT}
-        text-endpoint: ${WATSONX_TEXT_ENDPOINT}
+        base-url: https://us-south.ml.cloud.ibm.com
+        embedding-endpoint: ml/v1/text/embeddings?version=2023-05-29
+        text-endpoint: ml/v1/text/generation?version=2023-05-29
+        i-a-m-token: ${WATSONX_IAM_TOKEN}
         embedding:
-          enabled: true
-      
+#          enabled: true
+          options:
+            model: ibm/granite-20b-multilingual
+        project-id: ${WATSONX_PROJECT_ID}
+
+
+
+springdoc:
+  api-docs:
+    path: /api-docs
